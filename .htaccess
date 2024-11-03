@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    DirectoryIndex index.php
+
+    RewriteEngine on
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} !^www\. [OR]
+    RewriteCond %{HTTP_HOST} ^ciputraartpreneur\.com$ [NC]
+    RewriteRule ^ https://www.ciputraartpreneur.com%{REQUEST_URI} [R=301,L,NE]
+    RewriteCond %{THE_REQUEST} ^[A-Z]+\ /index\.php(/[^\ ]*)?\ HTTP/ 
+    RewriteRule ^index\.php(/(.*))?$ ciputraartpreneur.com/$2 [R=301,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+Header always append X-Frame-Options SAMEORIGIN
+
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+SetHandler application/x-httpd-alt-php56___lsphp
+</FilesMatch>
+
+ErrorDocument 403 https://www.ciputraartpreneur.com/
+ErrorDocument 404 https://www.ciputraartpreneur.com/
