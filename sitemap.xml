@@ -8,8 +8,29 @@
 
 
 <url>
-  <loc>https://www.citragardenbanjarmasin.com/</loc>
-  <lastmod>2024-11-15T21:47:24+00:00</lastmod>
+  <loc>https://ismafarsi.org/</loc>
+  <lastmod>2024-11-22T09:11:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ismafarsi.org/cart</loc>
+  <lastmod>2024-11-22T09:11:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ismafarsi.org/s</loc>
+  <lastmod>2024-11-22T09:11:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ismafarsi.org/store</loc>
+  <lastmod>2024-11-22T09:11:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ismafarsi.org/store/p/zeus</loc>
+  <lastmod>2024-11-22T09:11:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
