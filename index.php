@@ -1,5 +1,4 @@
 <?php
-<meta name="google-site-verification" content="tzwTr_nJ8xwWrfM390qohRZ_5LrPRzezXurUELy2I4Y" />
 /**
  * Loads the WordPress environment and template.
  *
